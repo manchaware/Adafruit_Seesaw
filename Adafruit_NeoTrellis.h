@@ -79,6 +79,7 @@ public:
   void activateKey(uint16_t num, uint8_t edge, bool enable = true);
   void activateKey(uint8_t x, uint8_t y, uint8_t edge, bool enable = true);
 
+  void setBrightness(uint8_t brightness);
   void setPixelColor(uint8_t x, uint8_t y, uint32_t color);
   void setPixelColor(uint16_t num, uint32_t color);
   void show();

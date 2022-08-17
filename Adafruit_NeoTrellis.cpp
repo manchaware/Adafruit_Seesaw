@@ -256,6 +256,16 @@ void Adafruit_MultiTrellis::activateKey(uint16_t num, uint8_t edge,
   activateKey(x, y, edge, enable);
 }
 
+void Adafruit_MultiTrellis::setBrightness(uint8_t brightness) {
+  Adafruit_NeoTrellis *t;
+  for (int n = 0; n < _rows; n++) {
+    for (int m = 0; m < _cols; m++) {
+      t = (_trelli + n * _cols) + m;
+      t->pixels.setBrightness(brightness);
+    }
+  }
+}
+
 /**************************************************************************/
 /*!
     @brief  set the color of a neopixel at a key index.
